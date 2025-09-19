@@ -1,4 +1,18 @@
-spring.application.name: demo
 logging:
   level:
     com.wvk.demo: DEBUG
+
+server.error.include-stacktrace: always
+server.error.include-message: always
+logging.level.org.springframework.web: DEBUG
+logging.level.org.thymeleaf: DEBUG
+logging.level.root: INFO
+
+
+spring:
+  application:
+    name: demo
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html

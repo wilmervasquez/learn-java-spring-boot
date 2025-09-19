@@ -1,10 +1,9 @@
-package com.wvk.demo;
+package com.wvk.demo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -16,7 +15,7 @@ public class Routes {
 
   @GetMapping("/store")
   String store() {
-    return "store";
+    return "info";
   }
 
   @GetMapping("/store/planet")
@@ -71,7 +70,6 @@ public class Routes {
   ResponseEntity<String> getUser() {
     return ResponseEntity.status(HttpStatus.OK).header("Content-Type", "application/json").body("User");
   }
-
 }
 
 
